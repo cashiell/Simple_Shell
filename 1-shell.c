@@ -11,7 +11,7 @@ int prompt(char **ptr)
 	int len;
 
 	if (isatty(STDIN_FILENO))
-		write(STDOUT_FILENO, "Heritage$ ", 10);
+		write(STDOUT_FILENO, "herban$ ", 10);
 	len = getline(ptr, &size, stdin);
 	if (len == EOF)
 		free_cptrn(-1, 1, *ptr);
@@ -52,7 +52,7 @@ int main(__attribute__((unused)) int argc, char **argv, char **envp)
 			continue;
 		}
 		free_cptrn(99, 1, ptr);
-		if (herit_built(string, envp))
+		if (herban_built(string, envp))
 			continue;
 		parent = fork();
 		if (parent == 0)

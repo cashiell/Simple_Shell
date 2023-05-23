@@ -23,9 +23,9 @@ typedef struct builtins
 int prompt(char **ptr);
 
 /* Function declarations for builtin shell commands */
-int herit_env(char **args, char **envp);
-int herit_exit(char **args, char **envp);
-int herit_built(char **args, char **envp);
+int herban_env(char **args, char **envp);
+int herban_exit(char **args, char **envp);
+int herban_built(char **args, char **envp);
 
 void free_array(char **array);
 void free_cptrn(int, const unsigned int n, ...);
