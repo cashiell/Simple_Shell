@@ -13,4 +13,6 @@ void cpy_str(int end, char *s, char **word_box);
 int word_count(char *str);
 void get_word(char **words, char *str);
 
+#define MAX_CMD_LEN 100
+
 #endif
