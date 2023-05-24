@@ -8,4 +8,9 @@
 #include <sys/wait.h>
 #include <string.h>
 
+char **strtow(char *str);
+void cpy_str(int end, char *s, char **word_box);
+int word_count(char *str);
+void get_word(char **words, char *str);
+
 #endif
