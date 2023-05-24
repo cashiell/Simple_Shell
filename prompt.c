@@ -18,7 +18,6 @@ int main(void)
 	{
 		if (isTerminal)
 			write(STDOUT_FILENO, "herban$ ", 8);
-		
 		len = getline(&line, &n, stdin);
 		if (len == -1)
 		{
@@ -46,7 +45,7 @@ int main(void)
 				{
 					perror("./shell");
 					return (1);
-				}	
+				}
 			}
 			write(STDERR_FILENO, "./shell: No such file or directory\n", 35);
 			myeof = 0;
