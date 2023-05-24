@@ -20,8 +20,7 @@ int main(void)
 		{
 			write(STDOUT_FILENO, "herban$ ", 8);
 			fflush(stdout);
-		}
-		len = getline(&input, &n, stdin);
+		} len = getline(&input, &n, stdin);
 		if (len == -1)
 		{
 			if (len == EOF)
@@ -31,7 +30,6 @@ int main(void)
 		}
 		if (len > 0 && input[len - 1] == '\n')
 			input[len - 1] = '\0';
-
 		child_pid = fork();
 		if (child_pid == -1)
 		{
@@ -46,8 +44,7 @@ int main(void)
 				perror("./shell");
 				return (1);
 			}
-		}
-		waitpid(child_pid, NULL, 0);
+		} waitpid(child_pid, NULL, 0);
 	} free(input);
 	return (0);
 }
