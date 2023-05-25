@@ -3,12 +3,12 @@
 /**
  * herban_exit - exits the shell
  * @args: arguments
- * @envp: environment variables
+ * @env: environment variables
  * Return: 1 on success
  */
-int herban_exit(char **args, char **envp)
+int herban_exit(char **args, char **env)
 {
-	(void) envp;
+	(void) env;
 	int status = 0;
 
 	if (args[1])
