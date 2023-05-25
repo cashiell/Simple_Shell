@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "herban.h"
 
 /**
  * herban_exit - exits the shell
@@ -8,8 +8,8 @@
  */
 int herban_exit(char **args, char **env)
 {
-	(void) env;
 	int status = 0;
+	(void) env;
 
 	if (args[1])
 		status = atoi(args[1]);

@@ -33,7 +33,7 @@ int herban_env(char **args, char **env);
 int herban_exit(char **args, char **env);
 int herban_built(char **args, char **env);
 
-void fre_array(char **array);
+void free_array(char **array);
 void free_cptrn(int, const unsigned int n, ...);
 
 char *_memcpy(char *dest, char *src, unsigned int n);

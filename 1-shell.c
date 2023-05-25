@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "herban.h"
 
 /**
  * prompt - prompts the user for commands
@@ -11,7 +11,7 @@ int prompt(char **ptr)
 	int len;
 
 	if (isatty(STDIN_FILENO))
-		write(STDOUT_FILENO, "herban$ ", 10);
+		write(STDOUT_FILENO, "Herban$ ", 8);
 	len = getline(ptr, &size, stdin);
 	if (len == EOF)
 		free_cptrn(-1, 1, *ptr);

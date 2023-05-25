@@ -1,4 +1,4 @@
-#incluude "shell.h"
+#include "herban.h"
 
 /**
  * check_path - check if command is in the path directories
@@ -18,7 +18,7 @@ void check_path(char **string, char **envp)
 		free(str1);
 		exit(0);
 	}
-	start = last = i = 0;
+	start = end = i = 0;
 	while (path[i])
 	{
 		if (path[i] == ':' || path[i + 1] == '\0')
@@ -26,7 +26,7 @@ void check_path(char **string, char **envp)
 			if (path[i + 1] == '\0')
 			{
 				i += 1;
-				last = 1;
+				end = 1;
 			}
 			else
 				path[i] = '\0';
@@ -39,7 +39,7 @@ void check_path(char **string, char **envp)
 				return;
 			}
 			free(str2);
-			if (last)
+			if (end)
 				break;
 			path[i] = ':';
 			start = i + 1;
