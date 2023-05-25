@@ -41,3 +41,18 @@ int _strcmp2(const char *s1, const char *s2)
 
 	return (result);
 }
+
+/**
+ * _strlen - returns the length of a string
+ * @s: the string
+ * Return: length of s
+ */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+		i++;
+
+	return (i);
+}
