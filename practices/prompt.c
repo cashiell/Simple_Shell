@@ -21,7 +21,9 @@ int main(void)
 		{
 			perror("Error");
 			return (1);
-		} token = strtok(line, " \t\n");
+		}
+		token = malloc(sizeof(n));
+		token = strtok(line, " \t\n");
 		while (token != NULL && argc < 10)
 		{
 			argv[argc++] = token;
